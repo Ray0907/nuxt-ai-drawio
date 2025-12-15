@@ -132,6 +132,10 @@ pnpm typecheck
 
 Inspired by [Nuxt UI Chat Template](https://github.com/nuxt-ui-templates/chat) and [Next AI Draw.io](https://github.com/anthropics/next-ai-draw-io).
 
+## Demo
+
+https://github.com/user-attachments/assets/d0d1d81d-ffd6-48fd-bf8d-faad63d35bc8
+
 ## License
 
 MIT
