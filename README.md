@@ -4,6 +4,10 @@
 
 AI-powered diagram editor that lets you create and edit draw.io diagrams using natural language. Built with [Nuxt 4](https://nuxt.com), [Nuxt UI 4](https://ui.nuxt.com), and [AI SDK v5](https://sdk.vercel.ai).
 
+## Demo
+
+https://github.com/user-attachments/assets/1f35562b-82c7-4ff9-9c18-f064afebfdde
+
 ## Features
 
 - **AI-Powered Diagram Generation** - Create flowcharts, system architectures, ER diagrams, mind maps, and more using natural language
@@ -16,6 +20,38 @@ AI-powered diagram editor that lets you create and edit draw.io diagrams using n
 - **Export Options** - Save as PNG, XML (.drawio), or Mermaid format
 - **Token Usage Display** - See input/output token counts for each request
 - **Access Code Protection** - Optional access code authentication
+
+## Usage
+
+Simply describe your diagram in natural language and the AI will generate it for you. You can also ask the AI to modify existing diagrams.
+
+### Example Prompts
+
+```
+Create a flowchart for user login process with email verification
+```
+
+```
+Design a system architecture diagram for a microservices e-commerce platform
+```
+
+```
+Draw an ER diagram for a blog system with users, posts, and comments
+```
+
+```
+Create a mind map about machine learning concepts
+```
+
+```
+Add a database layer to the current diagram
+```
+
+### Export Options
+
+- **PNG** - Export as image for presentations or documentation
+- **XML (.drawio)** - Save as draw.io native format for further editing
+- **Mermaid** - Convert to Mermaid syntax for markdown documentation
 
 ## Tech Stack
 
@@ -131,10 +167,6 @@ pnpm typecheck
 ## Credits
 
 Inspired by [Nuxt UI Chat Template](https://github.com/nuxt-ui-templates/chat) and [Next AI Draw.io](https://github.com/anthropics/next-ai-draw-io).
-
-## Demo
-
-https://github.com/user-attachments/assets/d0d1d81d-ffd6-48fd-bf8d-faad63d35bc8
 
 ## License
 
