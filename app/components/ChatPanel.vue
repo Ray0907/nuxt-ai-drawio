@@ -23,6 +23,9 @@ const emit = defineEmits<{
 const toast = useToast()
 const clipboard = useClipboard()
 
+// Model selection
+const { getRequestHeaders, is_configured, provider_id } = useModels()
+
 // Chat state
 const input = ref('')
 const previous_xml = ref('')
@@ -60,6 +63,7 @@ onMounted(() => {
 		id: 'main-chat',
 		transport: new DefaultChatTransport({
 			api: '/api/chat',
+			headers: () => getRequestHeaders(),
 			body: () => ({
 				xml: props.chartXml,
 				previous_xml: previous_xml.value
@@ -300,13 +304,16 @@ defineExpose({ clearChat })
 						</UTooltip>
 					</div>
 
-					<UChatPromptSubmit
-						:status="status"
-						color="neutral"
-						size="sm"
-						@stop="chat?.stop()"
-						@reload="chat?.regenerate()"
-					/>
+					<div class="flex items-center gap-1">
+						<ModelSelect />
+						<UChatPromptSubmit
+							:status="status"
+							color="neutral"
+							size="sm"
+							@stop="chat?.stop()"
+							@reload="chat?.regenerate()"
+						/>
+					</div>
 				</template>
 			</UChatPrompt>
 			<div v-else class="h-12 bg-muted rounded-lg animate-pulse" />
